@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/10.Exception and File Handling/10.Exception and File Handling.iml" filepath="$PROJECT_DIR$/10.Exception and File Handling/10.Exception and File Handling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11. Collections and Generics/11. Collections and Generics.iml" filepath="$PROJECT_DIR$/11. Collections and Generics/11. Collections and Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12.Multi threading and Executor Services/12.Multi threading and Executor Services.iml" filepath="$PROJECT_DIR$/12.Multi threading and Executor Services/12.Multi threading and Executor Services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13.Functional Programming/13.Functional Programming.iml" filepath="$PROJECT_DIR$/13.Functional Programming/13.Functional Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Main Java Concepts.iml" filepath="$PROJECT_DIR$/.idea/Main Java Concepts.iml" />
+    </modules>
+  </component>
+</project>
