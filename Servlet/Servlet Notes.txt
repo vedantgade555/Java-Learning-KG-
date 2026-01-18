@@ -1,0 +1,14 @@
+Servlet Lifecycle
+The lifecycle of a servlet is controlled by the container (e.g., Tomcat), and it goes
+through the following stages:
+1. Loading and Instantiation: The servlet class is loaded and an instance is
+created.
+
+2. Initialization ( init method): The init method is called once to initialize the
+servlet.
+
+3. Request Handling ( service method): The service method is called for each
+request to process it.
+
+4. Destruction ( destroy method): The destroy method is called once before the
+servlet is removed from service.
