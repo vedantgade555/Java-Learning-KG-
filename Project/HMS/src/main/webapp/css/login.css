@@ -1,0 +1,81 @@
+/* ===== DARK LOGIN PAGE ===== */
+body {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e5e7eb;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Center card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* Card */
+.paint-card {
+    background: rgba(2,6,23,0.95);
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+}
+
+/* Title */
+.paint-card .fs-4 {
+    color: #38bdf8;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+    color: #cbd5f5;
+    font-size: 14px;
+}
+
+/* Inputs */
+.form-control {
+    background-color: #020617;
+    border: 1px solid #334155;
+    color: #f9fafb;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.form-control::placeholder {
+    color: #64748b;
+}
+
+.form-control:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 0.2rem rgba(56,189,248,0.25);
+}
+
+/* Button */
+.btn.bg-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn.bg-success:hover {
+    background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+    transform: scale(1.05);
+}
+
+/* Signup link */
+.clink {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.clink:hover {
+    text-decoration: underline;
+}

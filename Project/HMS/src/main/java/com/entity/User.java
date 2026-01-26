@@ -8,10 +8,6 @@ public class User {
 	
 	
 	
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	public User(String fullname, String emai, String password) {
 		super();
 		this.fullname = fullname;

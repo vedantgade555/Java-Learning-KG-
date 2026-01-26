@@ -1,0 +1,141 @@
+/* =====================
+   GLOBAL DARK THEME
+===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a; /* Dark navy */
+    color: #e5e7eb;
+}
+
+/* =====================
+   NAVBAR (if using Bootstrap)
+===================== */
+.navbar {
+    background-color: #020617 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* =====================
+   CAROUSEL
+===================== */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 300px;
+    }
+}
+
+/* =====================
+   HEADINGS
+===================== */
+.fs-2,
+h1 {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* =====================
+   FEATURE CARDS
+===================== */
+.paint-card {
+    background: linear-gradient(145deg, #020617, #020617);
+    border-radius: 18px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+    transition: all 0.35s ease;
+}
+
+.paint-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(56,189,248,0.25);
+}
+
+.paint-card .fs-5 {
+    color: #22c55e;
+    font-weight: 500;
+}
+
+.paint-card p {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* =====================
+   SIDE DOCTOR IMAGE
+===================== */
+.col-md-4 img {
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    filter: brightness(0.9);
+}
+
+/* =====================
+   TEAM SECTION CARDS
+===================== */
+.card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    transition: all 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(56,189,248,0.25);
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.card-title {
+    color: #f9fafb;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn-primary {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    border: none;
+    border-radius: 30px;
+    padding: 6px 22px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    transform: scale(1.05);
+}
+
+/* =====================
+   SPACING
+===================== */
+.container {
+    margin-top: 50px;
+}
+
+/* =====================
+   CAROUSEL CONTROLS (DARK)
+===================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
