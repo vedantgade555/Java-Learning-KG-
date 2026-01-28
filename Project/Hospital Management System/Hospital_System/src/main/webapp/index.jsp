@@ -15,7 +15,6 @@
 <body>
 
 	<%@ include file="component/NavBar.jsp"%>
-
 	<!-- Adding a Corosol -->
 
 	<div id="carouselExampleIndicators" class="carousel slide"
@@ -183,3 +182,6 @@
 
 </body>
 </html>
+
+
+<!-- MAIN  -->

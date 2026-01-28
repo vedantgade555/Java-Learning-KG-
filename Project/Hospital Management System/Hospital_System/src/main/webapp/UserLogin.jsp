@@ -27,7 +27,7 @@
 
 						<p class="fs-4 text-center fw-bold mb-4">User Login</p>
 
-						<form action="#" method="post">
+						<form action="<%= request.getContextPath() %>/userLogin" method="post">
 
 							<div class="mb-3">
 								<label class="form-label">Email address</label> <input required
@@ -59,7 +59,6 @@
 					session.removeAttribute("msg"); // IMPORTANT
 					}
 					%>
-
 
 				</div>
 			</div>
