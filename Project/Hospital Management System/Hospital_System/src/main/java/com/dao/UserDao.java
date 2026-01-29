@@ -80,5 +80,47 @@ public class UserDao {
 
 		return u;
 	}
+	
+	
+	public boolean checkOldPassword(int userId, String oldPassword) {
+	    boolean flag = false;
+
+	    try {
+	        String sql = "select password from  user_details  where id=?";
+	        PreparedStatement ps = conn.prepareStatement(sql);
+	        ps.setInt(1, userId);
+
+	        ResultSet rs = ps.executeQuery();
+	        if (rs.next()) {
+	            if (rs.getString("password").equals(oldPassword)) {
+	                flag = true;
+	            }
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return flag;
+	}
+
+	public boolean updatePassword(int userId, String newPassword) {
+	    boolean flag = false;
+
+	    try {
+	        String sql = "update  user_details  set password=? where id=?";
+	        PreparedStatement ps = conn.prepareStatement(sql);
+	        ps.setString(1, newPassword);
+	        ps.setInt(2, userId);
+
+	        int i = ps.executeUpdate();
+	        if (i == 1) {
+	            flag = true;
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return flag;
+	}
+
+
 
 }

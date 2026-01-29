@@ -7,7 +7,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
 	<div class="container-fluid">
 
-		<a class="navbar-brand" href="index.jsp">
+		<a class="navbar-brand" href="userIndex.jsp">
 			<i class="fa-solid fa-house-chimney-medical"></i> MEDI HOME
 		</a>
 
@@ -38,7 +38,7 @@
 					</a>
 
 					<ul class="dropdown-menu dropdown-menu-end">
-						<li><a class="dropdown-item" href="#">Change Password</a></li>
+						<li><a class="dropdown-item" href="ChangePassword.jsp">Change Password</a></li>
 						<li><a class="dropdown-item" href="<%= request.getContextPath() %>/userLogout">Logout</a></li>
 					</ul>
 				</li>
