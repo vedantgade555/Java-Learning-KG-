@@ -7,6 +7,17 @@
 <title>Insert title here</title>
 <%@ include file="../component/AllCss.jsp"%>
 </head>
+
+<%
+Integer dcount = (Integer) request.getAttribute("doctorCount");
+Integer ucount = (Integer) request.getAttribute("userCount");
+
+
+%>
+
+
+
+
 <body>
 	<%@ include file="Navbar.jsp"%>
 
@@ -15,27 +26,32 @@
 	<div class="container p-5">
 		<div class="row">
 			<div class="col-md-4">
-				<a href="../doctor/addDoctor.jsp" class="text-decoration-none"><div class="card paint-card "
-						data-bs-toggle="modal" data-bs-target="#exampleModal">
-						<div class="card-body text-center text-success text-decoration-none">
+				<a href="../addDoctor.jsp" class="text-decoration-none"><div
+						class="card paint-card " data-bs-toggle="modal"
+						data-bs-target="#exampleModal">
+						<div
+							class="card-body text-center text-success text-decoration-none">
 							<i class="fa-solid fa-user-doctor fa-3x"></i><br>
 							<p class="fs-4 text-center">
-								Doctor <br><%= session.getAttribute("totalDoctors") %>
+								Doctor <br>
+								<%=dcount%>
 							</p>
 						</div>
 					</div></a>
 
 			</div>
+	
+			
 			<div class="col-md-4">
-				<div class="card paint-card " data-bs-toggle="modal"
-					data-bs-target="#exampleModal">
-					<div class="card-body text-center text-success">
-						<i class="fa-solid fa-circle-user fa-3x"></i><br>
-						<p class="fs-4 text-center">
-							User <br>34
-						</p>
-					</div>
-				</div>
+				<a href="<%= request.getContextPath() %>/ViewUserServlet" class="text-decoration-none"><div class="card paint-card " data-bs-toggle="modal"
+						data-bs-target="#exampleModal">
+						<div class="card-body text-center text-success">
+							<i class="fa-solid fa-circle-user fa-3x"></i><br>
+							<p class="fs-4 text-center">
+								User <br><%=ucount %>
+							</p>
+						</div>
+					</div></a>
 			</div>
 			<div class="col-md-4">
 				<div class="card paint-card " data-bs-toggle="modal"

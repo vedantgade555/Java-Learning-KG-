@@ -88,23 +88,22 @@ public class DoctorDao {
         return list;
     }
     
-    public int doctorCount() {
-        int count = 0; // Initialize count
+    public int countDoctor() {
+        int count = 0;
+        String sql = "SELECT COUNT(*) FROM doctor";
+
         try {
-            String sql = "SELECT COUNT(id) FROM doctor";
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) { // Move to the first (and only) row
-                count = rs.getInt(1); // Get the first column value
+            if (rs.next()) {
+                count = rs.getInt(1);
             }
-
-            rs.close();
-            ps.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return count;
     }
+
 
 }

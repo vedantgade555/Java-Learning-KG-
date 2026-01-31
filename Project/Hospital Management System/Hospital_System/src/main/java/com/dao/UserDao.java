@@ -3,7 +3,10 @@ package com.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.entity.Doctor;
 import com.entity.User;
 
 public class UserDao {
@@ -121,6 +124,44 @@ public class UserDao {
 	    return flag;
 	}
 
+	
+	public List<User> getAllUsers() {
+        List<User> list = new ArrayList<>();
 
+        try {
+            String sql = "select * from user_details ";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                User u = new User();
+                u.setId(rs.getInt("id"));
+                u.setFullname(rs.getString("full_name"));
+                u.setEmai(rs.getString("email"));
+                u.setPassword(rs.getString("password"));
+                list.add(u);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+
+	public int countUser() {
+	    int count = 0;
+	    try {
+	        String sql = "SELECT COUNT(*) FROM user";
+	        PreparedStatement ps = conn.prepareStatement(sql);
+	        ResultSet rs = ps.executeQuery();
+
+	        if (rs.next()) {
+	            count = rs.getInt(1);
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return count;
+	}
 
 }
